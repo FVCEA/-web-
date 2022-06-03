@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background:url(img/攻防人物/背景.jpg) no-repeat 5px 5px;
+            background-size: cover;
+        }
+        .offensive{
+            height:1000px;
+            width:1350px;
+            margin:30px auto;
+        }
+
+        .offensive .word{
+            height:90px;
+            width:1150px;
+        }
+
+        .title{
+            color: rgb(178, 170, 223);
+            font-size:22px;
+            font-weight:bold;
+            padding-bottom: 5px;
+            border-bottom:3px solid #cce477;
+        }
+        .member{
+            margin-left: 200px;
+        }
+
+        .offensive .member>ul li{            /*后代选择器   子元素选择器*/
+            height:300px;
+            width:200px;
+            margin:15px 16px;
+            float:left;
+            box-shadow:1px 1px 5px #666;
+            position:relative;
+        }
+
+        .offensive>.member  .h{
+            display:none;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        .offensive>.member li :hover .h{     /*子元素选择器     伪类选择器*/
+            display:block;
+            position:absolute;
+            top:0;
+            left:0;
+            width:200px;
+            height:300px;
+            box-shadow:3px 3px 5px black;
+            background-color: rgba(0,0,0,0.3);
+            padding-top:220px;
+            padding-left:110px;
+            color:white;
+            box-sizing: border-box;
+        }
+
+
+
+        .footer{
+            color:rgb(239, 240, 235);
+            /* 方便显示字体 */
+            background-color: #b8e7e7;
+            height:100px;
+            width: 2000px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="offensive" id="offensive" align="center">
+        <div class="word">
+            <div class="title" align="center"> <h1>防守人员</h1> </div>
+        </div>
+        <br>
+        <div class="member">
+            <ul>
+                <li class="l1">
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/1.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>AZAMI</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/2.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>DOC</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/3.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>FROST</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/4.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>CAVEIRA</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="#" target="_blank">
+                        <img src="img/攻防人物/防守方/5.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>LESION</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/6.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>MIRA</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/7.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>ELA</h2>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="here" href="" target="_blank">
+                        <img src="img/攻防人物/防守方/8.jpg" width="200px" height="300px">
+                        <div class="h">
+                            <h2>ALIBI</h2>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="footer" align="center">
+        <a href="主测试1.html"> <h1 >返回主页</h1> </a>
+    </div>
+
+
+</body>
+</html>

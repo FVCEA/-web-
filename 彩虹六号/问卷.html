@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷</title>
+    <style>
+        body {
+            background:url(img/问卷/背景.jpg) no-repeat 5px 5px;
+        }
+        .header-frist{
+        /*导航栏*/
+        height:50px;
+        width:100%;
+
+        position:absolute;
+        /* 固定定位 */
+        z-index:1;
+        /* 堆叠顺序 */
+    }
+
+    .header-frist>ul{
+        /*选项居中*/
+        height:50px;
+        float:left;
+        /*浮动*/
+        margin-left:700px;     
+        /*右外边距*/
+    }
+
+    .header-frist>ul li{
+        /*变列表*/
+        line-height:50px;
+        /*百分比计的行高   让字降下来*/
+        display:inline-block;
+        /* 横铺了但不知道为什么 */
+        padding:0 55px;
+        /*设置内边距 横铺间距*/
+    }
+
+    .header-frist>ul li>a{
+    /*对字体*/
+        color: #f0f0f0;
+        font-size:14px;
+    }
+    .header-frist>ul li:hover{
+    /*框的颜色*/
+        background-color: #d9ec6d;
+    }
+
+        .questionnaire{
+            color: rgb(255, 248, 248);
+            width: 1500px;
+            height: 600px;
+            position: absolute;
+        }
+
+        .tu{
+            width: 600px;
+            height: 500px;
+            padding-left: 550px;
+            padding-top: 110px;
+            /* float: left; */
+            padding-right: 0px;
+        }
+
+        .form{
+            border-style: none;
+
+            margin-right: 10px;
+            /* float: right; */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        if(confirm("你确定访问这个吗？")){
+            document.write("确定！");
+        }
+        else{
+            document.write("不确定!");
+        }
+    </script>
+
+    <div class="header-frist">
+        <ul>
+            <li><a href="https://www.ubisoft.com/en-gb/game/rainbow-six/siege/news-updates" target="_blank"><b> <h2>官网咨询</h2> </b></a></li>
+            <li><a href="主测试.html" target="_blank"> <h2>返回主页</h2> </a></li>
+        </ul>
+    </div>
+
+    <div class="questionnaire">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="tu">
+                            <img src="img/问卷/测试.jpg" width="400px">
+                        </div>
+                    </td>
+
+                    <td>
+                <form class="form" action="#">
+                        <fieldset>
+                            <legend>个人信息</legend>
+                            <label>姓名</label>
+                            <input type="text" name="name">
+                            <br>
+                            <label>性别</label>
+                            <input type="radio" name="sex" value="男">男
+                            <input type="radio" name="sex" value="女">女
+                            <br>
+                            <label>联系手机号</label>
+                            <input type="text" name="phone">
+                            <br>
+                            <label>联系QQ号</label>
+                            <input type="text" name="QQ">
+                            <br>
+                            <label>地址</label>
+                            <input type="text" name="addness">
+                            <br>
+                            <label>国家</label>
+                            <select>
+                                <optgroup label="欧洲">
+                                    <option>英国</option>
+                                    <option>德国</option>
+                                    <option>法国</option>
+                                </optgroup>
+                                <optgroup label="亚洲">
+                                    <option>中国</option>
+                                    <option>日本</option>
+                                    <option>朝鲜</option>
+                                </optgroup>
+                            </select>
+                        </fieldset>
+                        <br>
+                        <br>
+                        请问你对该网站不满之处：
+                        <fieldset>
+                            <legend>不满之处</legend>
+                            <input type="checkbox" name="mistake">界面不美观
+                            <br>
+                            <input type="checkbox" name="mistake">内容过时
+                            <br>
+                            <input type="checkbox" name="mistake">内容少
+                            <br>
+                            <input type="checkbox" name="mistake">页面排布不合理
+                            <br>
+                            <input type="checkbox" name="mistake">界面反应慢
+                            <br>
+                        </fieldset> 
+                        <br>
+                        <input type="reset">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit">
+                    </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

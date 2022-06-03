@@ -1,0 +1,361 @@
+   * {
+        margin: 0;
+        padding: 0;
+    }
+    /* 清空 */
+/*导航栏*/
+    .header-frist{
+        /*导航栏*/
+        height:50px;
+        width:100%;
+
+        position:absolute;
+        /* 绝对定位 */
+        /* z-index:1; */
+        /* 堆叠顺序 */
+    }
+
+    .header-frist>ul{
+        /*选项居中*/
+        height:50px;
+        float:left;
+        /*浮动*/
+        margin-left:700px;     
+        /*右外边距*/
+    }
+
+    .header-frist>ul li{
+        /*变列表*/
+        line-height:50px;
+        /*百分比计的行高   让字降下来*/
+        display:inline-block;
+        /* 横铺了但不知道为什么 */
+        padding:0 15px;
+        /*设置内边距 横铺间距*/
+    }
+
+    .header-frist>ul li>a{
+    /*对字体*/
+        color: #fcf9f9;
+        font-size:14px;
+    }
+    .header-frist>ul li:hover{
+    /*框的颜色*/
+        background-color: #b47ee3;
+    }
+    .header-frist:hover{
+    /*伪类选择器 选择鼠标指针浮动在其上的元素，并设置其样式 接触变黑**/
+        background: #111212;
+    }
+
+    /*第一个横图*/
+    .Navigation-img{
+        height:150px;
+        width:2000px;
+        background-image: url("./img/育碧loge.jpg");
+    }  
+
+/*无缝滚动图*/
+    .scrollbox{
+        width: 800px;
+        height: 200px;
+        /*边框*/
+        border: 0px;
+        position: absolute;
+        left: 0px;
+        top: 150px;
+        /* 图片有150 */
+    }
+
+    .scrollimg-list{
+        width:500px;
+        height:700px;
+        list-style: none;
+        /* 图标消失 */
+        position: absolute;
+        display: flex;
+        animation: picmove 10s linear infinite forwards;
+    }
+
+    /*滚动*/
+    @keyframes picmove {
+        from {
+            transform: translate(0);
+        }
+        to {
+            transform: translate(-2000px);
+        }
+    }
+
+    .scrollimg-list:hover {
+        animation-play-state: paused;
+    }
+
+/*主页*/
+    /*介绍*/
+    .game-introduce{
+        width:1000px;
+        height:190px;
+        margin:190px auto;
+        /* 位置 */
+    }
+    [title]{          
+        /* 游戏介绍 */
+        width:900px;
+        height:30px;
+        text-align: center;
+        /* 把文本排列到中间 */
+        padding-bottom: 80px;
+        /* 下内边距 */
+        margin:0 auto;
+    }
+
+    [title="transition-Intro"]{
+        /* 下边框代替横线 */
+        border-bottom:4px solid #dfec23;
+        /* solid样式为实心的 */
+    }
+
+    .IntroMain p{
+        line-height:30px;
+        padding:40px 60px;
+        text-indent: 2em;
+        /* 将段落的第一行缩进 */
+        text-align: left;
+        /* 文本对齐方式 */
+    }
+
+    /*第二个导航栏*/
+    .header-second{
+        height:54px;
+        width:100%;
+        background: rgba(25, 4, 4, 0.9);
+        position:relative;
+        top:0;
+        left:0;
+        z-index:8;
+    }
+    .header-second>ul{
+        height:50px;
+        margin-right:700px;
+        float:right;
+    }
+    .header-second>ul li{
+        line-height:50px;
+        display:inline-block;
+        padding:0 15px;
+    }
+    .header-second>ul li>a{                  /*对字体*/
+        color: #b47ee3;
+        font-size:14px;
+    }
+    .header-second>ul li:hover{
+        background-color: #e9f383;    /*框的颜色*/
+    }
+    /* 下拉按钮样式 */
+    .dropbutton {
+        background-color: #8735da;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        /* 接触时光标变化 */
+    }
+    /* 容器 <div> - 需要定位下拉内容 */
+    .droplist {
+        position: relative;
+        left:650px;
+        /* 定位 */
+        display: inline-block;
+    }
+
+    /* 下拉内容 (默认隐藏) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    /* 下拉菜单的链接 */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* 鼠标移上去后修改下拉菜单链接颜色 */
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    /* 在鼠标移上去后显示下拉菜单 */
+    .droplist:hover .dropdown-content {
+        display: block;
+    }
+
+    /* 当下拉内容显示后修改下拉按钮的背景颜色 */
+    .droplist:hover .dropbutton {
+        background-color: #8824f0;
+    }
+
+
+
+/*人物*/
+    .renwu{
+        height:700px;
+        background-image: url("./img/主背景图.jpg");
+        /*background-repeat: repeat-x;*/
+        background-size:  100%;
+        background-attachment: fixed;
+        /*margin:50px auto;*/
+    }
+    .jing{                   /*分竖栏*/
+        height:300px;
+        width:178px;
+        background-color: rgba(0,0,0,0.4);
+        float:left;
+        margin: 30px 5px;
+        transition: 0.8s;
+        overflow:hidden;
+        color:white;
+    }
+    .fang{                   /*分竖栏*/
+        height:300px;
+        width:178px;
+        background-color: rgba(0,0,0,0.4);
+        float:right;
+        margin: 30px 5px;
+        transition: 0.8s;
+        overflow:hidden;
+        color:white;
+    }
+    .Defense-liebiao H2{                    /*字的样式*/
+        margin-bottom:20px;
+        margin-left:40px;
+    }
+
+    .Defense-liebiao H2+p{                  /*相邻兄弟选择器*/
+        color:white;
+        font-size:16px;
+        text-indent: 2em;
+        line-height:25px;
+        margin:5px 10px;
+    }
+
+    .Defense-liebiao>div:hover{            /*下滑*/
+        margin-top:70px;
+        height:500px;
+        background-color: #c22222;
+    }
+
+
+    /*      ////////////////////////////////////////        响应式图片相册  地图     */
+
+    .map{
+        border: 1px solid #ccc;
+    }
+    .map:hover{
+        border: 1px solid #777;
+    }
+    .map img{
+        width: 100%;
+        height: auto;
+    }
+    .desc{
+        padding: 15px;
+        text-align: center;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .responsive{
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;                                 
+    }
+    @media only screen and (max-width: 700px){
+        .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+        }
+    }
+    @media only screen and (max-width: 500px){
+        .responsive {
+            width: 100%;
+        }
+    }
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .season{
+        margin-top: 30px;
+        padding-top :30px;
+    }
+
+    /* //////////////////////////////////////////////////////轮播//// */
+            		/*大盒子*/
+		.box{
+			width: 750px;
+			height:900px;
+			position: relative;
+			margin-left: 0px;
+
+		}
+		/*图片大小*/
+		/* img{
+			width: 200px;
+			height: 700px;
+		} */
+		/*文本信息*/
+		#text{
+			width: 500px;
+			height: 40px;
+			font-size: 20px;
+			font-family: 微软雅黑;
+			text-align: center;
+			line-height: 40px;
+			background-color: #e7e1e1f8;
+			opacity: 0.5;
+			color:#070707;
+			position: absolute;
+			left:0px;
+			bottom: 0px;
+		}
+		/*左右箭头*/
+		#left,#right{
+			width:60px;
+			height: 70px;
+			font-size: 20px;
+			font-family: 微软雅黑;
+			text-align: center;
+			line-height: 70px;
+			background-color: #dae9b1;
+			opacity: 0.5;
+			color:#FFFFFF;
+
+		}
+		/*定位信息*/
+		#left{
+			position: absolute;
+			top:400px;
+			left:0px;
+		}
+		#right{
+			position: absolute;
+			top: 400px;
+			right:0px;
+		}
+
+
+
+
+        .footer{
+            color:rgb(247, 244, 244);
+            /* 方便显示字体 */
+            background-color: #282b2d;
+            height:250px;
+            width: 2000px;
+        }
